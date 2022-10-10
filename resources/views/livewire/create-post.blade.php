@@ -11,7 +11,6 @@
             <div class="mb-4">
                 <x-jet-label value="Titulo del Post"/>
                 <x-jet-input type="text" class="w-full" wire:model.defer="title"/>
-                {{$title}}
             </div>
             <div class="mb-4">
                 <x-jet-label value="Contenido del Post"/>
