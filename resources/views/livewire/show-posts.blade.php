@@ -8,16 +8,17 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <!-- component -->
         <x-table>
-            <div class="px-6 py-4">
-                <x-jet-input class="w-full" placeholder="Escriba que quiere buscar" type="text" wire:model="search">
+            <div class="px-6 py-4 flex items-center">
+                <x-jet-input class="flex-1 mr-4" placeholder="Escriba que quiere buscar" type="text" wire:model="search">
                 </x-jet-input>
+                @livewire('create-post')
             </div>
             @if ($posts->count())
                 <table class="min-w-full divide-y divide-gray-200">
                     <thead>
                         <tr>
                             <th scope="col" wire:click="order('id')"
-                                class="cursor-pointer px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                class="w-24 cursor-pointer px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
                                 ID
                                 @if ($sort == 'id')
                                     @if ($direction == 'asc')
